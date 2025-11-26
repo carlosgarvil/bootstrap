@@ -144,14 +144,6 @@ Está especialmente indicado para:
 
 - Desarrollo Web en Entorno Cliente (DAW)
 - Diseño de Interfaces Web
-- Proyectos de 1.º y 2.º
-- Talleres o cursos de iniciación a Bootstrap
+- Talleres o cursos de iniciación a Bootstrap/desarrollo web
 
 ---
-
-## Cómo usar este repositorio
-
-1. Clonar el repositorio:
-
-```bash
-git clone https://github.com/tuusuario/tu-repo-bootstrap.git
