@@ -1,174 +1,157 @@
-📘 Guía Completa de Bootstrap — Material Didáctico
+# Guía de Bootstrap – Material didáctico
 
-Este repositorio contiene una serie de páginas HTML autoexplicativas diseñadas para enseñar Bootstrap de manera progresiva, clara y orientada a estudiantes de desarrollo web (DAW/DAM).
+Este repositorio contiene una serie de páginas HTML autoexplicativas para enseñar Bootstrap de forma progresiva y orientada a alumnado de desarrollo web (DAW/DAM).
 
 Cada archivo incluye:
 
-✔ Explicación del concepto
-✔ Ejemplos visuales
-✔ Código comentado
-✔ Un ejercicio final resuelto
+- Explicación del concepto
+- Ejemplos visuales
+- Código comentado
+- Un ejercicio final resuelto
 
-Es ideal para trabajar Bootstrap desde cero sin instalar nada, solo con CDN.
+Está pensado para trabajar Bootstrap solo con CDN, sin necesidad de instalación adicional.
 
-📂 Contenido del repositorio
-1️⃣ Layout básico + Breakpoints
+---
 
-Archivo: 01-layout.html
+## Contenido del repositorio
 
-Aprende:
+### 1. Layout básico y breakpoints  
+**Archivo:** `01-layout.html`
 
-.row, .col, .col-*
+Aprenderás:
 
-Breakpoints (col-sm-*, col-md-*, col-lg-*)
+- `.row`, `.col`, `.col-*`
+- Breakpoints (`col-sm-*`, `col-md-*`, `col-lg-*`)
+- Distribución responsive real
 
-Distribución responsive real
+**Ejercicio:** crear varias grids responsive con diferentes combinaciones de columnas.
 
-➡ Ejercicio: crear grids responsive.
+---
 
-2️⃣ Containers
-
-Archivo: 02-containers.html
-
-Incluye:
-
-.container
-
-.container-fluid
-
-.container-{breakpoint}
-
-➡ Ejercicio: misma grid en distintos containers para comparar anchos.
-
-3️⃣ Espaciado y utilidades
-
-Archivo: 03-spacing-utils.html
-
-Aprende:
-
-Márgenes: m-*
-
-Padding: p-*
-
-Gap en grids: g-*
-
-Alineación: text-center, text-end
-
-Flexbox rápido: d-flex, justify-content-*, align-items-*
-
-➡ Ejercicio: maquetar 3 cajas con estilos distintos.
-
-4️⃣ Cards (tarjetas)
-
-Archivo: 04-cards.html
+### 2. Containers  
+**Archivo:** `02-containers.html`
 
 Incluye:
 
-.card, .card-body
+- `.container`
+- `.container-fluid`
+- `.container-{breakpoint}`
 
-.card-img-top
+**Ejercicio:** usar la misma grid dentro de distintos tipos de container para comparar los anchos.
 
-.card-title, .card-text
+---
 
-Cards + Grid para layouts tipo tienda o blog
+### 3. Espaciado y utilidades  
+**Archivo:** `03-spacing-utils.html`
 
-➡ Ejercicio: grid responsivo de productos o posts.
+Aprenderás:
 
-5️⃣ Tipografía y colores
+- Márgenes: `m-*` (por ejemplo `m-3`, `mt-4`, `mx-2`)
+- Padding: `p-*` (por ejemplo `p-2`, `py-3`, `px-4`)
+- Gap en grids: `g-*` dentro de `.row`
+- Alineación de texto: `text-start`, `text-center`, `text-end`
+- Flexbox rápido: `d-flex`, `justify-content-*`, `align-items-*`
 
-Archivo: 05-typography-colors.html
+**Ejercicio:** maquetar tres cajas con espacios, alineaciones y centrados distintos.
 
-Aprende:
+---
 
-.h1–.h6
-
-.lead
-
-.fw-bold, .fw-light
-
-.text-primary, .text-muted
-
-.bg-light
-
-➡ Ejercicio: transformar texto plano en contenido jerarquizado.
-
-6️⃣ Botones y Call To Action
-
-Archivo: 06-buttons-cta.html
+### 4. Cards (tarjetas)  
+**Archivo:** `04-cards.html`
 
 Incluye:
 
-.btn
+- `.card`, `.card-body`
+- `.card-img-top`
+- `.card-title`, `.card-text`
+- Combinación de cards con grid para hacer listados tipo tienda o blog
 
-.btn-primary, .btn-outline-*
+**Ejercicio:** crear un grid responsivo de cards (productos o entradas de blog).
 
-.btn-sm, .btn-lg
+---
 
-.d-block, .w-100 para móvil
+### 5. Tipografía y colores  
+**Archivo:** `05-typography-colors.html`
 
-➡ Ejercicio: sección hero con CTA principal y secundario.
+Aprenderás:
 
-7️⃣ Formularios modernos
+- Niveles de título: `.h1` a `.h6`
+- Párrafo destacado: `.lead`
+- Grosor del texto: `.fw-bold`, `.fw-light`
+- Colores de texto: `.text-primary`, `.text-muted`
+- Fondo claro: `.bg-light`
 
-Archivo: 07-forms.html
+**Ejercicio:** convertir un bloque de texto plano en contenido con estructura visual (título, subtítulo, párrafos y elementos secundarios).
 
-Aprende:
+---
 
-.form-control
-
-.form-label
-
-.form-select
-
-.input-group
-
-.form-check
-
-Validación visual: .is-valid, .is-invalid
-
-➡ Ejercicio: formulario de registro responsivo con validación.
-
-8️⃣ Navbar y menús responsivos
-
-Archivo: 08-navbar.html
+### 6. Botones y Call To Action  
+**Archivo:** `06-buttons-cta.html`
 
 Incluye:
 
-.navbar
+- Botones base: `.btn`
+- Variantes: `.btn-primary`, `.btn-secondary`, `.btn-outline-*`
+- Tamaños: `.btn-sm`, `.btn-lg`
+- Botones de ancho completo en móvil: `.d-block`, `.w-100`
 
-.navbar-expand-*
+**Ejercicio:** crear una sección tipo hero con un botón principal grande y un botón secundario.
 
-.navbar-brand
+---
 
-.navbar-toggler
+### 7. Formularios modernos  
+**Archivo:** `07-forms.html`
 
-.collapse
+Aprenderás:
 
-.nav-link
+- Campos de entrada: `.form-control`
+- Etiquetas: `.form-label`
+- Grupos de entrada: `.input-group`
+- Selects estilizados: `.form-select`
+- Checkboxes y radios: `.form-check`
+- Validación visual básica: `.is-valid`, `.is-invalid` y mensajes de feedback
 
-➡ Ejercicio: un navbar que se colapsa en móvil y se expande en escritorio.
+**Ejercicio:** construir un formulario de registro responsivo con nombre, apellidos, email, contraseña, curso, aceptación de términos y validación visual básica.
 
-🧭 Objetivo de este material
+---
 
-Este conjunto de contenidos permite que el alumnado:
+### 8. Navbar y menús responsivos  
+**Archivo:** `08-navbar.html`
 
-Aprenda Bootstrap desde cero, paso a paso.
+Incluye:
 
-Entienda el CSS que Bootstrap genera automáticamente.
+- Barra de navegación: `.navbar`
+- Comportamiento responsive: `.navbar-expand-*`
+- Marca o logo: `.navbar-brand`
+- Botón hamburguesa: `.navbar-toggler` y `.navbar-toggler-icon`
+- Contenido colapsable: `.collapse`, `.navbar-collapse`
+- Enlaces de menú: `.nav-item`, `.nav-link`
 
-Modele interfaces reales sin necesidad de mucho diseño propio.
+**Ejercicio:** crear una navbar que se colapsa en móvil (menú hamburguesa) y se muestra horizontal en escritorio.
 
-Pueda reutilizar componentes para sus proyectos.
+---
 
-Pensado para clases de:
+## Objetivo del material
 
-📌 Desarrollo Web en Entorno Cliente (DAW)
-📌 Diseño de Interfaces Web
-📌 Proyectos de 1º y 2º
-📌 Formación transversal para nuevos programadores
+Este material permite que el alumnado:
 
-💡 Requisitos
+- Aprenda Bootstrap paso a paso desde ejemplos sencillos.
+- Comprenda cómo se construyen layouts responsive reales.
+- Modele interfaces modernas (landing, cards, formularios, menús).
+- Pueda reutilizar los ejemplos como base para sus propios proyectos.
 
-Ninguno.
-Todos los archivos funcionan solo con el CDN de Bootstrap.
-Basta con abrirlos en el navegador.
+Está especialmente indicado para:
+
+- Desarrollo Web en Entorno Cliente (DAW)
+- Diseño de Interfaces Web
+- Proyectos de 1.º y 2.º
+- Talleres o cursos de iniciación a Bootstrap
+
+---
+
+## Cómo usar este repositorio
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/tuusuario/tu-repo-bootstrap.git
