@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrusel con Fondo + Explicación + Highlight.js</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <style>
+    .carousel-item {
+      height: 90vh;
+      min-height: 450px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .carousel-item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+
+    .carousel-caption { 
+      z-index: 2; 
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+<!-- ===================================================== -->
+<!-- CARRUSEL -->
+<!-- ===================================================== -->
+<div id="carouselEjemplo" class="carousel slide mb-5" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active"
+         style="background-image: url('https://picsum.photos/id/1015/1200/800');">
+      <div class="carousel-caption text-start">
+        <h1 class="fw-bold">Primera diapositiva</h1>
+        <p>Ejemplo de slide con imagen de fondo.</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item"
+         style="background-image: url('https://picsum.photos/id/1024/1200/800');">
+      <div class="carousel-caption">
+        <h1 class="fw-bold">Segunda diapositiva</h1>
+        <p>Caption centrado sobre la imagen.</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item"
+         style="background-image: url('https://picsum.photos/id/1005/1200/800');">
+      <div class="carousel-caption text-end">
+        <h1 class="fw-bold">Tercera diapositiva</h1>
+        <p>Texto alineado a la derecha.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button"
+          data-bs-target="#carouselEjemplo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button"
+          data-bs-target="#carouselEjemplo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+  <!-- Indicadores -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselEjemplo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#carouselEjemplo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselEjemplo" data-bs-slide-to="2"></button>
+  </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- EXPLICACIÓN -->
+<!-- ===================================================== -->
+<div class="container bg-white p-4 rounded shadow mb-5">
+
+  <h2 class="mb-3">Cómo controlar el carrusel</h2>
+  <hr>
+
+  <!-- MÉTODO 1 -->
+  <h3>1️⃣ Control mediante atributos <code>data-bs-*</code></h3>
+
+  <p>
+    Bootstrap permite controlar el carrusel sin escribir JavaScript.
+    Los atributos más importantes son:
+  </p>
+
+  <ul>
+    <li><code>data-bs-ride="carousel"</code> → activa el autoplay.</li>
+    <li><code>data-bs-target="#carouselEjemplo"</code> → indica qué carrusel controlar.</li>
+    <li><code>data-bs-slide="next"</code> → mueve a la siguiente diapositiva.</li>
+    <li><code>data-bs-slide="prev"</code> → mueve a la anterior.</li>
+    <li><code>data-bs-slide-to="1"</code> → salta al slide número 1.</li>
+  </ul>
+
+  <pre><code class="html">&lt;button data-bs-target="#carouselEjemplo" data-bs-slide="next"&gt;Siguiente&lt;/button&gt;</code></pre>
+
+  <pre><code class="html">&lt;button data-bs-target="#carouselEjemplo" data-bs-slide-to="2"&gt;Ir al slide 3&lt;/button&gt;</code></pre>
+
+  <hr class="my-4">
+
+  <!-- MÉTODO 2 -->
+  <h3>2️⃣ Control mediante JavaScript</h3>
+
+  <p>Con JS tienes control total del carrusel:</p>
+
+  <pre><code class="javascript">const el = document.getElementById("carouselEjemplo");
+const carousel = new bootstrap.Carousel(el);</code></pre>
+
+  <h5>Métodos disponibles:</h5>
+
+  <pre><code class="javascript">carousel.next();      // pasa a la siguiente
+carousel.prev();      // pasa a la anterior
+carousel.to(2);       // va al slide 3 (índice 2)
+carousel.pause();     // pausa el autoplay
+carousel.cycle();     // reanuda el autoplay</code></pre>
+
+  <h4 class="mt-4">Ejemplo práctico:</h4>
+
+  <pre><code class="javascript">&lt;script&gt;
+  const el = document.getElementById("carouselEjemplo");
+  const carousel = new bootstrap.Carousel(el, {
+    interval: 3000,   // tiempo entre slides
+    pause: "hover"    // pausa al pasar el ratón
+  });
+
+  // Cambiar automáticamente al slide 3 a los 5s
+  setTimeout(() =&gt; {
+    carousel.to(2);
+  }, 5000);
+&lt;/script&gt;</code></pre>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

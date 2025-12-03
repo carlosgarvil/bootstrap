@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bootstrap – Espaciado y Utilidades</title>
 
   <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <style>
     body {
       padding-bottom: 4rem;
     }
+
     pre {
       background: #222;
       color: #eee;
@@ -23,6 +22,7 @@
       font-size: 0.9rem;
       overflow-x: auto;
     }
+
     .demo-box {
       border: 1px dashed #0d6efd;
       background: #0d6efd11;
@@ -30,11 +30,13 @@
       text-align: center;
       font-weight: 600;
     }
+
     .demo-height {
       min-height: 110px;
     }
   </style>
 </head>
+
 <body>
 
   <!-- CABECERA -->
@@ -73,7 +75,8 @@
       <ul>
         <li><code>m</code> = margin (margen exterior)</li>
         <li><code>p</code> = padding (margen interior)</li>
-        <li>Direcciones: <code>t</code> (top), <code>b</code> (bottom), <code>s</code> (start), <code>e</code> (end), <code>x</code> (horizontal), <code>y</code> (vertical)</li>
+        <li>Direcciones: <code>t</code> (top), <code>b</code> (bottom), <code>s</code> (start), <code>e</code> (end),
+          <code>x</code> (horizontal), <code>y</code> (vertical)</li>
       </ul>
       <p>
         Ejemplos:
@@ -95,7 +98,7 @@
     </section>
 
     <hr>
-
+    Modal
     <!-- GAP -->
     <section class="mb-5">
       <h2 class="h4">3. Separación entre columnas: <code>g-*</code> en filas</h2>
@@ -103,6 +106,9 @@
         Dentro de una <code>.row</code>, puedes controlar el espacio entre columnas usando la clase
         <code>g-*</code> (gap). Esto afecta a la separación horizontal y vertical entre las columnas.
       </p>
+      <div class="alert alert-warning" role="alert">
+        <p>Hay discrepancias en la documentación Bootstrap y la implementación (al menos en la versión usada en este HTML). Aunque en la propia documentación de Bootstrap se menciona <code>g-*</code>, en realidad se usa <code>gap-*</code>.</p>
+      </div>
 
       <pre><code>&lt;div class="row g-0"&gt;  &lt;!-- sin espacio entre columnas --&gt;
 &lt;div class="row g-3"&gt;  &lt;!-- espacio medio --&gt;
@@ -111,22 +117,22 @@
 
       <p class="mb-2"><strong>Ejemplo con <code>g-0</code>, <code>g-3</code> y <code>g-5</code>:</strong></p>
 
-      <div class="row g-0 mb-3">
-        <div class="col demo-box">g-0</div>
-        <div class="col demo-box">g-0</div>
-        <div class="col demo-box">g-0</div>
+      <div class="row gap-0 mb-3">
+        <div class="col demo-box">gap-0</div>
+        <div class="col demo-box">gap-0</div>
+        <div class="col demo-box">gap-0</div>
       </div>
 
-      <div class="row g-3 mb-3">
-        <div class="col demo-box">g-3</div>
-        <div class="col demo-box">g-3</div>
-        <div class="col demo-box">g-3</div>
+      <div class="row gap-3 mb-3">
+        <div class="col demo-box">gap-3</div>
+        <div class="col demo-box">gap-3</div>
+        <div class="col demo-box">gap-3</div>
       </div>
 
-      <div class="row g-5 mb-3">
-        <div class="col demo-box">g-5</div>
-        <div class="col demo-box">g-5</div>
-        <div class="col demo-box">g-5</div>
+      <div class="row gap-5 mb-3">
+        <div class="col demo-box">gap-5</div>
+        <div class="col demo-box">gap-5</div>
+        <div class="col demo-box">gap-5</div>
       </div>
     </section>
 
@@ -134,7 +140,8 @@
 
     <!-- TEXT ALIGN -->
     <section class="mb-5">
-      <h2 class="h4">4. Alineación de texto: <code>text-start</code>, <code>text-center</code>, <code>text-end</code></h2>
+      <h2 class="h4">4. Alineación de texto: <code>text-start</code>, <code>text-center</code>, <code>text-end</code>
+      </h2>
       <p>
         Estas clases alinean el texto dentro del elemento:
       </p>
@@ -160,9 +167,10 @@
 
     <!-- FLEX -->
     <section class="mb-5">
-      <h2 class="h4">5. Flexbox rápido: <code>d-flex</code>, <code>justify-content-*</code>, <code>align-items-*</code></h2>
+      <h2 class="h4">5. Flexbox rápido: <code>d-flex</code>, <code>justify-content-*</code>, <code>align-items-*</code>
+      </h2>
       <p>
-        Bootstrap encapsula las propiedades de Flexbox en clases muy cortas.  
+        Bootstrap encapsula las propiedades de Flexbox en clases muy cortas.
         Primero activas Flexbox con <code>d-flex</code> y luego ajustas alineación:
       </p>
 
@@ -345,4 +353,5 @@
   <!-- Bootstrap JS (para componentes interactivos, aunque aquí casi no se usan) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

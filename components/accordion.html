@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Accordion Bootstrap</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h1 class="mb-4">Ejemplo de Accordion con Bootstrap 5</h1>
+
+    <!-- Accordion -->
+    <div class="accordion" id="ejemploAccordion">
+
+      <!-- Item 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" 
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#collapseOne" 
+                  aria-expanded="true" 
+                  aria-controls="collapseOne">
+            Primer apartado (data-bs)
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" 
+             aria-labelledby="headingOne" 
+             data-bs-parent="#ejemploAccordion">
+          <div class="accordion-body">
+            Este panel usa <strong>data-bs-toggle</strong> y <strong>data-bs-target</strong>.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" 
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#collapseTwo" 
+                  aria-expanded="false" 
+                  aria-controls="collapseTwo">
+            Segundo apartado (data-bs)
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" 
+             aria-labelledby="headingTwo" 
+             data-bs-parent="#ejemploAccordion">
+          <div class="accordion-body">
+            Este panel también está controlado por atributos <code>data-bs-*</code>.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 controlado por JS -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button id="btnAbrirJS" class="accordion-button collapsed" type="button">
+            Tercer apartado (abierto mediante JavaScript)
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" 
+             aria-labelledby="headingThree" 
+             data-bs-parent="#ejemploAccordion">
+          <div class="accordion-body">
+            Este panel se abre mediante <strong>JavaScript</strong>.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Botón JS externo -->
+    <button class="btn btn-primary mt-4" id="abrirPanelJS">
+      Abrir panel 3 por JavaScript
+    </button>
+
+  </div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // --- Manejo por JavaScript ---
+    const panelJS = document.getElementById('collapseThree');
+    const bsCollapse = new bootstrap.Collapse(panelJS, { toggle: false });
+
+    // Abrir desde botón externo
+    document.getElementById('abrirPanelJS').addEventListener('click', () => {
+      bsCollapse.show();
+    });
+
+    // También abrir al pulsar el botón del encabezado
+    document.getElementById('btnAbrirJS').addEventListener('click', () => {
+      bsCollapse.toggle();
+    });
+  </script>
+
+</body>
+</html>
